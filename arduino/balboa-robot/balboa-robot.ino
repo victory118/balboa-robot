@@ -110,13 +110,11 @@ void loop() {
 //  Balboa::TestMotorVelocityStep(motors, encoders, right_pid, right_vel, -1, 0, 'R'); // Passed!
 
   // Step velocity commands with PID and feedforward
-//  left_pid.set_gains(2.0, 0.5, 0, 10.0*Ts);
+//  left_pid.set_gains(2.0, 0.5, 0, 15.0*Ts);
 //  Balboa::TestMotorVelocityStep(motors, encoders, left_pid, left_vel, 1, 1, 'L'); // Passed!
-  left_pid.set_gains(2.0, 0, 0.2, 15.0*Ts);
-  Balboa::TestMotorVelocityStep(motors, encoders, left_pid, left_vel, -1, 1, 'L'); // Passed!
+//  left_pid.set_gains(2.0, 0, 0.1, 15.0*Ts);
+//  Balboa::TestMotorVelocityStep(motors, encoders, left_pid, left_vel, 1, 1, 'L'); // Passed!
 
-//    right_pid.set_gains(2.0, 0.0, 0.0, 10.0 * control_period / 1000.0);
-//    right_pid.set_feedforward_flag(true);
-//    Farmaid::TestMotorVelocityStep(right_motor, right_encoder, right_pid, 1); // Passed!
-//    Farmaid::TestMotorVelocityStep(right_motor, right_encoder, right_pid, -1); // Passed!
+  right_pid.set_gains(2.0, 0, 0.1, 15.0*Ts);
+  Balboa::TestMotorVelocityStep(motors, encoders, right_pid, right_vel, -1, 1, 'R'); // Passed!
 }
